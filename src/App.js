@@ -4,14 +4,24 @@ import SignupForm from './pages/signupform'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './pages/homepage'
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      signined: false
+    }
+  }
+  Signin=()=>{
+    this.setState({signined: true})
+  }
   render() {
     return (
       <div>
         <Router>
         <div>
-          <Route exact path="/" component={HomePage}/>
-          <Route exact path="/signinform" component={SigninForm} />
-          <Route exact path="/signupform" component={SignupForm} />
+        {console.log(this.state.signined)}
+          <Route exact path="/" render={()=><HomePage signined={this.state.signined}/>}/>
+          <Route exact path="/signinform" render={()=><SigninForm Signin={this.Signin}/>} />
+          <Route exact path="/signupform" render={()=><SignupForm Signin={this.Signin}/>} />
           </div>
         </Router>
       </div>

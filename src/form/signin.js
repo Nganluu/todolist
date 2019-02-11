@@ -2,8 +2,14 @@ import React, { Component } from 'react'
 import { Button, Col, Row, FormGroup, Label, Input, TabPane } from 'reactstrap'
 import {withRouter} from 'react-router-dom'
  class signin extends Component {
-    
+    constructor(props){
+        super(props);
+        this.state={
+            signined: false
+        }
+    }
     onClick=()=>{
+        this.props.Signin()
       let path = "/";
     this.props.history.push(path)
     }
@@ -28,12 +34,8 @@ import {withRouter} from 'react-router-dom'
                         </FormGroup>
                     </Col>
                 </Row>
-                <Row form>
-                    <Col>
-                        <p>Forget password?</p>
-                    </Col>
-                </Row>
                     <Button onClick={this.onClick} style={{ marginTop: "10px" }} color="primary">Sign in</Button>
+                    
             </TabPane>
         )
     }

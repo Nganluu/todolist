@@ -9,7 +9,7 @@ export default class form extends Component {
         <Link to="/" style={{textDecoration: "none"}}>
           <p style={{paddingTop: "15px", textAlign: "center", fontSize: "40px", color: "white" }}><b>TO DO LIST</b></p>
         </Link>
-        <Signinpage />
+        <Signinpage Signin={this.props.Signin} />
       </div>
     )
   }

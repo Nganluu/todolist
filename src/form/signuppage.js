@@ -42,8 +42,8 @@ export default class form extends Component {
                         </Nav>
                     </Row>
                     <TabContent style={{paddingTop: "10px"}} activeTab={this.state.activeTab}>
-                        <Signin activeTab={this.state.activeTab} />
-                        <Signup activeTab={this.state.activeTab} />
+                        <Signin Signin={this.props.Signin} activeTab={this.state.activeTab} />
+                        <Signup Signin={this.props.Signin} activeTab={this.state.activeTab} />
                     </TabContent>
                 </Form>
             </div>

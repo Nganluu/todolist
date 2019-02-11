@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Row, FormGroup, Label, Input, Button, TabPane } from 'reactstrap'
-import {withRouter} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
  class signup extends Component {
     onClick=()=>{
      let path = "/"; 
@@ -46,8 +46,12 @@ import {withRouter} from 'react-router-dom';
                         </FormGroup>
                     </Col>
                 </Row>
-                
                 <Button onClick={this.onClick} style={{ marginTop: "10px" }} color="primary">Sign up</Button>
+                <Row form>
+                    <p>or you have an account?
+                    <Link to="/signinform">Click here</Link>
+                    </p>
+                </Row>
             </TabPane>
 
 
