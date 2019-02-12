@@ -8,13 +8,15 @@ export default class home extends Component {
     return (
       <div className="container-fluid" id="header">
         <div className="row">
-          <div className="col-md-10" >
+          <div className="col-md-10"  >
             <i className="fas fa-tasks" style={{ marginRight: "10px" }}></i>
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}><b> TO DO LIST</b></Link>
+            <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "30px" }}><b> TO DO LIST</b></Link>
           </div>
           {this.props.signined ?
-            <div className="col-md-2" style={{ fontSize: "30px"}}>
-            <i style={{marginLeft: "135px"}} className="fas fa-user" ></i>
+            <div className="col-md-2" style={{ fontSize: "30px" }}>
+              <Link to="/myBoard">
+                <Button color='primary' style={{ marginLeft: "30px", fontSize: "20px" }}>Go to your board</Button>
+              </Link>
             </div> :
             <div className="col-md-2">
               <Link to="/signinform">
