@@ -9,7 +9,7 @@ import {withRouter} from 'react-router-dom'
         }
     }
     onClick=()=>{
-        this.props.Signin()
+    this.props.Signin()
       let path = "/";
     this.props.history.push(path)
     }

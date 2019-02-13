@@ -10,7 +10,7 @@ export default class home extends Component {
         <div className="row">
           <div className="col-md-10"  >
             <i className="fas fa-tasks" style={{ marginRight: "10px" }}></i>
-            <Link to="/" style={{ textDecoration: "none", color: "white", fontSize: "30px" }}><b> TO DO LIST</b></Link>
+            <Link to="/" style={{ textDecoration: "none", color: "#4267b2;", fontSize: "30px" }}><b> TO DO LIST</b></Link>
           </div>
           {this.props.signined ?
             <div className="col-md-2" style={{ fontSize: "30px" }}>

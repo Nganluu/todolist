@@ -12,9 +12,19 @@ class App extends Component {
       signined: false
     }
   }
+
+  componentDidMount() {
+    if(localStorage.getItem("signedIn") === "true") {
+      this.setState({
+        signined: true
+      })
+    }
+  }
+
   Signin=()=>{
+    localStorage.setItem("signedIn", true);
     this.setState({signined: true})
-    saveState(this.state)
+    
   }
   render() {
     return (
@@ -25,7 +35,7 @@ class App extends Component {
           <Route exact path="/" render={()=><HomePage signined={this.state.signined}/>}/>
           <Route exact path="/signinform" render={()=><SigninForm Signin={this.Signin}/>} />
           <Route exact path="/signupform" render={()=><SignupForm Signin={this.Signin}/>} />
-          <Route exact path="/myboard" component={BoardPage}/>
+          <Route exact path="/myboard" render={()=><BoardPage />}/>
           </div>
         </Router>
       </div>
