@@ -7,11 +7,10 @@ export default class body extends Component {
     return (
       <div id="body" className="row">
         <div style={{ fontSize: "25px" }} className="col-md-7">
-          {/* <i className="fas fa-tasks" style={{ marginRight: "10px" }}></i>
-          <span><b> TO DO LIST </b></span> */}
           <p style={{ margin: "15%", marginLeft: "20%", fontSize: "45px" }}>
             <b>YOUR BUSY LIFE<br /> DESERVES THIS.</b>
             <p>Todolist is an award-winning app used by<br /> millions of people to stay organized and<br /> get more done.</p>
+          {this.props.signined? null: <div>
             <Link to="/signinform">
               <Button color="primary" style={{ margin: "10px", padding: "5px 30px", boxShadow: "0 11px 26px 0 rgba(0,0,0,0.23)" }}>
                 Sign In
@@ -22,6 +21,7 @@ export default class body extends Component {
                 Sign Up
             </Button>
             </Link>
+            </div>}
           </p>
         </div>
         <div className="col-md-5">

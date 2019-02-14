@@ -7,7 +7,7 @@ export default class home extends Component {
     return (
       <div>
         <Header signined ={this.props.signined}/>
-        <Body/>
+        <Body signined ={this.props.signined} />
       </div>
     )
   }

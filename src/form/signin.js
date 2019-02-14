@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Col, Row, FormGroup, Label, Input, TabPane } from 'reactstrap'
 import {withRouter} from 'react-router-dom'
+import PropTypes from 'prop-types'
  class signin extends Component {
     constructor(props){
         super(props);
@@ -10,7 +11,7 @@ import {withRouter} from 'react-router-dom'
     }
     onClick=()=>{
     this.props.Signin()
-      let path = "/";
+    let path = "/";
     this.props.history.push(path)
     }
     render() {
@@ -39,5 +40,8 @@ import {withRouter} from 'react-router-dom'
             </TabPane>
         )
     }
+}
+signin.propTypes={
+    email: PropTypes.element.isRequired
 }
 export default withRouter(signin)

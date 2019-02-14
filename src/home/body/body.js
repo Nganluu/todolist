@@ -9,7 +9,7 @@ export default class body extends Component {
   render() {
     return (
       <div>
-        <Bodypart1/>
+        <Bodypart1 signined ={this.props.signined}/>
         <Bodypart2/>
         <Bodypart3/>
       </div>
