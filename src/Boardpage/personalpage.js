@@ -16,6 +16,7 @@ class personalpage extends Component {
             <div>
                 <Headerofpp />
                 <Board/>
+                
             </div>
         )
     }
